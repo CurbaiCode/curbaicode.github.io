@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import "https://www.w3schools.com/w3css/4/w3.css";
+@import "curbai-icons.css";
+
+:root {
+	--orange: #ff5a36;
+}
+
+@font-face {
+	font-family: "Galeb Regular";
+	font-style: normal;
+	src: url("../fonts/Galeb-Regular.woff2") format("woff2"),
+		url("../fonts/Galeb-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Galeb Bold";
+	font-style: normal;
+	src: url("../fonts/Galeb-Bold.woff2") format("woff2"),
+		url("../fonts/Galeb-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Galeb Light";
+	font-style: normal;
+	src: url("../fonts/Galeb-Light.woff2") format("woff2"),
+		url("../fonts/Galeb-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Galeb Black";
+	font-style: normal;
+	src: url("../fonts/Galeb-Black.woff2") format("woff2"),
+		url("../fonts/Galeb-Black.woff") format("woff");
+}
+
+h5,
+body {
+	font-family: "Galeb Regular", Arial, sans-serif;
+}
+
+body {
+	height: 100%;
+	line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h6 {
+	font-weight: normal;
+	font-family: "Galeb Bold", Arial, sans-serif;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+	color: #757575;
+}
+
+h6 {
+	font-size: 17px;
+}
+
+.w3-wide {
+	font-family: "Galeb Black", sans-serif;
+}
+
+html {
+	background: linear-gradient(#fff, #f8e0d8 75%);
+	cursor: default;
+}
+
+html,
+main,
+main > div {
+	height: 100%;
+}
+
+main {
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+.w3-display-middle {
+	padding-top: 48px;
+}
+
+.w3-display-middle .curbai-icon {
+	color: var(--orange);
+	font-size: 256px;
+	line-height: 128px;
+}
+
+.curbai-orange,
+.curbai-button,
+.curbai-button-large {
+	color: #fff !important;
+	background-color: var(--orange) !important;
+}
+
+.curbai-orange-border {
+	color: var(--orange) !important;
+	background-color: #fff !important;
+	box-shadow: inset 0 0 0 3px var(--orange);
+}
+
+.curbai-hover-orange:hover {
+	color: #fff !important;
+	background-color: var(--orange) !important;
+	box-shadow: none;
+}
+
+.curbai-hover-light-orange:hover,
+.curbai-button:hover,
+.curbai-button-large:hover {
+	color: #fff !important;
+	background-color: var(--light-orange) !important;
+	box-shadow: none;
+}

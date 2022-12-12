@@ -1,18 +1,14 @@
 @font-face {
-	font-family: 'Curbai';
-	src:
-		url('fonts/Curbai.ttf?vb4sp3') format('truetype'),
-		url('fonts/Curbai.woff?vb4sp3') format('woff'),
-		url('fonts/Curbai.svg?vb4sp3#Curbai') format('svg');
+	font-family: "Curbai";
+	src: url("../fonts/Curbai.woff") format("woff2"),
+		url("../fonts/Curbai.woff2") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
 }
 
-[class^="curbai-icons-"],
-[class*=" curbai-icons-"] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: 'Curbai' !important;
+.curbai-icon {
+	font-family: "Curbai" !important;
 	speak: never;
 	font-style: normal;
 	font-weight: normal;
@@ -22,6 +18,7 @@
 	font-size: 44px;
 	line-height: 48px;
 	letter-spacing: normal;
+	padding-top: 4px;
 	white-space: nowrap;
 	word-wrap: normal;
 	direction: ltr;
@@ -36,16 +33,24 @@
 	/* IE10+/Edge */
 	user-select: none;
 	/* Standard */
-
+	cursor: default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.curbai-icons-watermelon {
-	padding-top: 4px;
+a .curbai-icon,
+button .curbai-icon,
+w3-button .curbai-icon {
+	cursor: pointer
 }
 
-.curbai-icons-watermelon::before {
-	content: "\1f349";
+/* .curbai-icon::before {
+	content: "\1F349";
+} */
+
+footer .curbai-icon {
+	font-size: 52px;
+	line-height: 56px;
+	padding-top: 4px;
 }
