@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<title>Projects - Curbai</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#1E1E1E">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+
+	<body>
+
+		<!-- Navbar (sit on top) -->
+		<div id="nav-content" class="w3-top"></div>
+		<script>$("#nav-content").load("../common/navbar.html");</script>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block space-gray w3-card animate-sidebar w3-hide-medium w3-hide-large" id="main-sidebar"></nav>
+		<script>$("#main-sidebar").load("../common/sidebar.html");</script>
+
+		<!-- Header with full-height image -->
+		<header class="bgimg-3 w3-display-container w3-center w3-text-white">
+			<div class="w3-display-middle page">
+				<h1 class="w3-xxxlarge">Projects</h1>
+				<span class="w3-xlarge w3-padding-bottom">See What We’re Growing</span>
+			</div>
+			<div class="w3-display-container w3-white w3-circle transition-icon">
+				<i class="w3-display-middle f7-icons f7-size-40">lightbulb</i>
+			</div>
+		</header>
+
+		<main id="#main">
+
+			<!-- Projects Section -->
+			<section id="projects" class="silver">
+				<div id="the-web">
+					<div class="section-content">
+						<h2>THE WEB</h2>
+					</div>
+					<div class="section-gallery">
+						<div class="gallery">
+							<div class="gallery-content">
+								<ul class="item-container">
+									<li class="gallery-item">
+										<a class="projects-item" href="/projects/details/?p=sunray-gardens">
+											<div class="w3-white w3-round-xlarge projects-item-article">
+												<div class="projects-item-image">
+													<picture class="projects-item-picture">
+														<img class="w3-image" src="/images/projects/sunray-gardens/sunray-gardens-thumbnail.png" alt="Screenshot of the Sunray Gardens homepage." loading="lazy" />
+													</picture>
+												</div>
+												<div class="projects-item-content">
+													<div class="projects-item-header-container">
+														<div class="projects-item-header">
+															<h3 class="projects-item-title">Sunray Gardens</h3>
+															<span class="w3-text-green projects-item-time"><i class="f7-icons f7-size-21 f7-inline">checkmark_circle</i> Complete</span>
+														</div>
+														<p class="w3-text-gray projects-item-description">A simple website for the fictitious company Sunray Gardens. This website was designed as a test for gaining experience in web development.</p>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div id="education">
+					<div class="section-content">
+						<h2>EDUCATION</h2>
+					</div>
+					<div class="section-gallery">
+						<div class="gallery">
+							<div class="gallery-content">
+								<ul class="item-container">
+									<li class="gallery-item">
+										<a class="projects-item" href="https://github.com/CurbaiCode/CS43Final/">
+											<div class="w3-white w3-round-xlarge projects-item-article">
+												<div class="projects-item-image">
+													<picture class="projects-item-picture">
+														<img class="w3-image" src="/images/projects/github.png" alt="GitHub logo." loading="lazy" />
+													</picture>
+												</div>
+												<div class="projects-item-content">
+													<div class="projects-item-header-container">
+														<div class="projects-item-header">
+															<h3 class="projects-item-title">OOP Tic-Tac-Toe</h3>
+															<span class="w3-text-green projects-item-time"><i class="f7-icons f7-size-21 f7-inline">checkmark_circle</i> Complete</span>
+														</div>
+														<p class="w3-text-gray projects-item-description">An Object-oriented programming (OOP) implementation of the classic game Tic-Tac-Toe, written in Python.</p>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="gallery-item">
+										<a class="projects-item" href="/projects/details/?p=sunray-gardens">
+											<div class="w3-white w3-round-xlarge projects-item-article">
+												<div class="projects-item-image">
+													<picture class="projects-item-picture">
+														<img class="w3-image" src="/images/projects/sunray-gardens/sunray-gardens-thumbnail.png" alt="Screenshot of Sunray Gardens homepage." loading="lazy" />
+													</picture>
+												</div>
+												<div class="projects-item-content">
+													<div class="projects-item-header-container">
+														<div class="projects-item-header">
+															<h3 class="projects-item-title">Sunray Gardens</h3>
+															<span class="w3-text-green projects-item-time"><i class="f7-icons f7-size-21 f7-inline">checkmark_circle</i> Complete</span>
+														</div>
+														<p class="w3-text-gray projects-item-description">A simple website for the fictitious company Sunray Gardens. This website was designed as a test for gaining experience in web development.</p>
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="paddlenav">
+								<ul>
+									<li>
+										<button class="w3-button w3-hover-none paddlenav-arrow" onclick="slide(this, -1)" title="Previous"><i class="f7-icons f7-size-32">chevron_left_circle</i><i class="f7-icons f7-size-32">chevron_left_circle_fill</i></button>
+									</li>
+									<li>
+										<button class="w3-button w3-hover-none paddlenav-arrow" onclick="slide(this, 1)" title="Next"><i class="f7-icons f7-size-32">chevron_right_circle</i><i class="f7-icons f7-size-32">chevron_right_circle_fill</i></button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer" class="platinum w3-padding-large"></footer>
+		<script>$("#footer").load("../common/footer.html");</script>
+		<script src="/scripts/main.js"></script>
+		<script>$(".projects-item").each(function (i) {
+				var item = $($(".projects-item")[i]);
+				item.attr("title", item.find(".projects-item-title").text());
+			});
+
+			function smoothHorizontalScrolling(e, time, amount) {
+				var eAmt = amount / 100;
+				var curTime = 0;
+				var scrollCounter = 0;
+				while (curTime <= time) {
+					window.setTimeout(SHS_B, curTime, e, scrollCounter, eAmt, e.scrollLeft);
+					curTime += time / 100;
+					scrollCounter++;
+				}
+			}
+
+			function SHS_B(e, sc, eAmt, start) {
+				e.scrollLeft = (eAmt * sc) + start;
+			}
+
+			// Carousel slider buttons
+			function slide(el, value) {
+				var box = el.parentElement.parentElement.parentElement.parentElement.firstElementChild;
+				//var prev = box.parentElement.lastElementChild.firstElementChild.firstElementChild.firstElementChild;
+				//var next = box.parentElement.lastElementChild.firstElementChild.lastElementChild.firstElementChild;
+				var amount = parseInt(getComputedStyle(document.getElementById("projects")).getPropertyValue("--image-size"), 10);
+				var gap = parseInt(getComputedStyle(document.getElementById("projects")).getPropertyValue("--gallery-gap"), 10);
+				smoothHorizontalScrolling(box, 250, value * (amount + gap));
+			}</script>
+
+	</body>
+
+</html>

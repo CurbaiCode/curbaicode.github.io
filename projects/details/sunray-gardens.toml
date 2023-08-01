@@ -1,0 +1,344 @@
+title = "Sunray Gardens"
+category = "The Web"
+author = ["Cosimo Dussk"]
+author_info = ["Curbai"]
+
+[head]
+eyebrow = "Complete"
+eyebrow_color = "green"
+eyebrow_icon = "checkmark_circle"
+
+[[head.subtitle]]
+content = "A simple website for the fictitious company Sunray Gardens. This website was designed as a test for gaining experience in web development."
+
+[head.hero]
+big = true
+fullbleed = false
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/sunray-gardens.png"
+alt = "Screenshot of Sunray Gardens homepage"
+caption = "Sunray Gardens website."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/sunray-gardens.png"
+btn_tooltip = "Download"
+download = true
+
+[body]
+
+[[body.element]]
+content = "Back when I was learning the basics of HTML, my goal was to be able to create professional-looking websites. At the time, I did not have the time or knowledge to create a very complex site. The only things I knew more than the basics were little things I had decided to look-up, like how to animate buttons. They were not essential things, but I knew I wanted to use them in the future. I decided to make a website that had to do with plants or gardening, and spent a total of seven hours working on making the Sunray Gardens homepage. Here are the steps I took to create this website."
+
+[[body.element]]
+tag = "h2"
+content = "Setting Up"
+
+[[body.element]]
+content = "The first thing I needed to consider when starting the creation of the site, was how I was going to do it. A website can be created with the help of online host sites such as WordPress, Google Sites, Wix, or Weebly. However, I prefer writing the HTML by hand as it provides more control over the site as a whole. For this I only needed some type of text editor. Visual Studio Code is my go-to text editor, however for the purposes of this project I chose TextEdit."
+
+[[body.element]]
+content = "To use TextEdit, I needed to make sure that TextEdit would open up in a plain text format (code does not need rich formatting). This is done in TextEdit’s preferences as shown in the screenshot below. I recommend not checking the box labeled “Wrap to page”, because it creates a box around your code and having many wrapped lines can be confusing."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/textedit-preferences.png"
+alt = "Screenshot of TexEdit “New Document” preference pane"
+caption = "TextEdit “New Document” preferences."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/textedit-preferences.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "Another setting I had to put in place, was to display HTML files as HTML code. If this is not done, it will open (once code is written) as a text-formatted version of the page. Then I wouldn’t be able to edit the code later, because the file would be as if one had highlighted all the content on a website and pasted it into a text editor."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/textedit-preferences-2.png"
+alt = "Screenshot of TextEdit “Open and Save” preference pane"
+caption = "TextEdit “Open and Save” preferences."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/textedit-preferences-2.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+tag = "h2"
+content = "Organize"
+
+[[body.element]]
+content = "This step is very important. It allows you to manage your files more easily and keep track of files efficiently."
+
+[[body.element]]
+content = "The first part of this step is to create a folder in which to host your site. In this example the main folder is named “Complex Sites”."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/main-folder-structure.png"
+alt = "Screenshot of the contents of the “Complex Sites” folder"
+caption = "Inside the websites main “Complex Sites” folder."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/main-folder-structure.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "Inside of this folder I created two new folders with the names “Site 1” and “Resources”. Best practices suggest that your folders contain only lowercase letters to aid in typing URLs, but here I capitalized them for improved human readability."
+
+[[body.element]]
+content = "Next, inside of my “Resources” folder I made the “Images”, “Icons”, “Styles”, and “Scripts” folders. Any pictures I wanted on the site were saved into the “Images” folder; any logos or icons into the “Icons” folder; the CSS files into the “Styles” folder; and the JavaScript files into the “Scripts” folder (I did not include any JavaScript, so that folder was left empty). All other resources that helped me make the site just stayed inside the “Resources” folder."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/resources-folder-structure.png"
+alt = "Screenshot of the contents of the “Resources” folder"
+caption = "Inside the “Resources” folder."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/resources-folder-structure.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "This is all I needed for the organization of the website."
+
+[[body.element]]
+tag = "h2"
+content = "Starting to Code"
+
+[[body.element]]
+content = "I put the heart of the website inside the folder “Site 1”. Using TextEdit, I wrote the basic HTML skeleton and saved it as <code>SiteOne | Home.htm</code>."
+
+[[body.element]]
+tag = "blockquote"
+content = "You can also use <code>.html</code> as the extension, however some older computers can’t open files with four-character extensions. I used <code>.htm</code> for increased support, although it is not necessary."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/site-folder-structure.png"
+alt = "Screenshot of the contents of the “Site 1” folder"
+caption = "Inside the “Site 1” folder."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/site-folder-structure.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "In the “Styles” folder (which is in the “Resources” folder), I saved a blank document as <code>SiteOne.css</code>. Usually, the main CSS and JavaScript files for a site are named just that: <code>main.css</code> and <code>main.js</code>."
+
+[[body.element]]
+tag = "blockquote"
+content = "Styling an HTML website with a separate file is called external styling."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/styles-folder-structure.png"
+alt = "Screenshot of the contents of the “Styles” folder"
+caption = "Inside the “Styles” folder."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/styles-folder-structure.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "For the <code>SiteOne.css</code> file to be used on the page, I had to include the following line of code to add <code>SiteOne.css</code> as the stylesheet."
+
+[[body.element]]
+code = '&lt;link rel="stylesheet" type="text/css" href="../Resources/Styles/SiteOne.css"&gt;'
+
+[[body.element]]
+content = "The <code>rel</code> attribute <code>stylesheet</code> tells the browser that whatever you are going to reference is a document that will change how the raw HTML is displayed. The <code>type</code> attribute <code>text/css</code> tells it that the document is written in CSS. The <code>href</code> attribute <code>../Resources/Styles/SiteOne.css</code> tells it where the file is located. Here you can insert a URL for a stylesheet, but I design and write my own. The double period <code>..</code> tells the browser to back out one level, to the contents of the main folder. Then back into the “Resources” and “Styles” folders and link to the file named <code>SiteOne.css</code>, hence the tag’s name <code>&lt;link&gt;</code>. With this <code>&lt;link&gt;</code> tag in place, any CSS in <code>SiteOne.css</code>, is automatically implemented on the page."
+
+[[body.element]]
+tag = "blockquote"
+content = "If you want to reference a file with an absolute path, you can simply start the URL with <code>/</code>. For example, <code>/Resources/Styles/SiteOne.css</code> references the same file regardless of the file it is called from."
+
+[[body.element]]
+tag = "h2"
+content = "Finding a Style"
+
+[[body.element]]
+content = "An important part of the style of your page is the wireframe. A wireframe is basically the layout, design, or style of your page. I found one that I thought would look the best for a plant or gardening website. In this and most wireframes, the shaded crossed out boxes are where images go. There is a special box labeled “Animation”. In the website, I included a <code>.gif</code> image as the animation."
+
+[[body.element]]
+content = "When using a wireframe, you do not have to follow it exactly. For example, instead of an animation you could add a video. My website ended up ending below the animation and image gallery. Filler text is added to a wireframe, showing where the content of the potential site would be located."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/wireframe.png"
+alt = "Example of website wireframe"
+caption = "Website wireframe."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/wireframe.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = 'Next up was choosing a color scheme. I used the website <a href="https://coolors.co/">Coolors</a> to help with this task. Since I was going to make a website based on plants, I decided that a green scheme would be appropriate. I found one that I thought would look great as the color scheme for the site. <a href="https://coolors.co/">Coolors</a> is a great resource for color schemes, whether for a website or otherwise. The main reason it is great for website color schemes is because each color has its hex color code at the bottom, i.e. <code>#05668d</code>. This allows you to put that exact color into a website.'
+
+[[body.element]]
+tag = "blockquote"
+content = "Another color code that is often used in websites is RGB. This is just a different way to express the same color values. In hex, the values range from <code>00</code> to <code>FF</code>, but in RGB the values range from <code>0</code> to <code>255</code>."
+
+[[body.element]]
+tag = "figure"
+big = true
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/color-scheme.png"
+alt = "Color scheme ranging from dark blue to light green"
+caption = 'Website color scheme. Generated by <a href="https://coolors.co/">Coolors</a>.'
+btn_icon = "arrow_up_right_square"
+btn_href = "https://coolors.co/05668d-427aa1-ebf2fa-679436-a5be00/"
+btn_tooltip = "External link"
+
+[[body.element]]
+content = 'For custom fonts, <a href="https://fonts.google.com/">Google Fonts</a> is a very helpful resource. Once I found the font I wanted, I clicked on the plus on the corner of the font, and opened the <kbd>@IMPORT</kbd> tab. Putting the code, between the two <code>&lt;style&gt;</code> tags, into the CSS file made the new font available for use on the site. Wherever I wanted that font to be used, I added the <code>font-family</code> property and value to the element to be styled in the CSS file. This made that element appear with the font. Because this uses a public API URL to import the font, anyone who accesses the website will see the same fonts applied in their own browser.'
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/google-fonts.png"
+alt = "Screenshot of Google Fonts font family selection modal"
+caption = 'Adding the Google Font “Baloo Thambi” to a website.'
+btn_icon = "arrow_up_right_square"
+btn_href = "https://fonts.google.com/specimen/Baloo+Thambi+2/"
+btn_tooltip = "External link"
+
+[[body.element]]
+tag = "h2"
+content = "The Beginnings"
+
+[[body.element]]
+content = "This is when I added all the content, except for the images, to the HTML of the website."
+
+[[body.element]]
+tag = "figure"
+big = true
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/website-beginnings.png"
+alt = "Screenshot of the Sunray Gardens website at an early state of development"
+caption = "Early stage of my website, with HTML file (top-right) and CSS file (bottom-right)."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/website-beginnings.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "I did not want to spend extra time worrying about the text content of the site, so I used ”Lorem Ipsum” filler text instead. I also used a single image saved into the “Images” folder, to be placed everywhere the real images would eventually go. This helped me know if the images had enough room, and if it looked too cluttered or too empty."
+
+[[body.element]]
+content = "The menu was my next concern. In the past, I had always used button elements that were side by side. For this project, however, I decided to use a list of buttons as the underlying structure for menus. I used the same transition/animation technique from one of my earlier websites to make the buttons/links in the navigation bar fade darker."
+
+[[body.element]]
+content = "The links and buttons in the navigation bar were all dummy links so they didn’t bring the user anywhere or do anything at all."
+
+[[body.element]]
+tag = "h2"
+content = "Modifying/Revising"
+
+[[body.element]]
+content = "I kept changing the fonts and sizes of elements on the site using CSS. I added a photo gallery (although it did not work quite as expected, it still turned out looking good). And finally I was satisfied. In the process of modifying and revising, I also made sure that the site was responsive. Responsive, in this case, means that the site content would not overlap, disappear, or otherwise not look as good when viewed on a phone, tablet, or other smaller devices with different sized viewing windows or screens."
+
+[[body.element]]
+tag = "div"
+class = "carousel"
+
+[[body.element.child]]
+tag = "div"
+class = "carousel-media"
+
+[[body.element.child.child]]
+tag = "figure"
+class = "carousel-item current"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/gallery-progress.png"
+alt = "Screenshot of the Sunray Gardens website at an early state of development"
+caption = "Main styling in progress."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/gallery-progress.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element.child.child]]
+tag = "figure"
+class = "carousel-item"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/gallery-progress-2.png"
+alt = "Screenshot of the Sunray Gardens website after menu was corrected"
+caption = "Menu corrected."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/gallery-progress-2.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element.child.child]]
+tag = "figure"
+class = "carousel-item"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/gallery-progress-3.png"
+alt = "Screenshot of the Sunray Gardens website with brand content added"
+caption = "Brand content added."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/gallery-progress-3.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element.child.child]]
+tag = "figure"
+class = "carousel-item"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/gallery-progress-4.png"
+alt = "Screenshot of the Sunray Gardens website with photo gallery in progress"
+caption = "Photo gallery in progress."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/gallery-progress-4.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element.child.child]]
+tag = "figure"
+class = "carousel-item"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/gallery-progress-5.png"
+alt = "Screenshot of the Sunray Gardens website almost complete"
+caption = "Website almost complete."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/gallery-progress-5.png"
+btn_tooltip = "Download"
+download = true
+
+[[body.element]]
+content = "With the website looking sufficiently professional, I had learned more about HTML and CSS. Looking back, it seems like I did a lot in just seven hours. It is amazing to see just how easy it is to make a website that looks as good as the one I made for Sunray Gardens or even this website, the one you’re reading this article on."
+
+[[body.element]]
+tag = "figure"
+media = "picture"
+type = "img"
+src = "/images/projects/sunray-gardens/sunray-gardens.png"
+alt = "Screenshot of Sunray Gardens homepage"
+caption = "Sunray Gardens website."
+btn_icon = "arrow_down_circle"
+btn_href = "/images/projects/sunray-gardens/sunray-gardens.png"
+btn_tooltip = "Download"
+download = true

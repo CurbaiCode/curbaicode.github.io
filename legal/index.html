@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<title>Legal - Curbai</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#1E1E1E">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+
+	<body>
+
+		<!-- Navbar (sit on top) -->
+		<div id="nav-content" class="w3-top"></div>
+		<script>$("#nav-content").load("../common/navbar.html");</script>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block space-gray w3-card animate-sidebar w3-hide-medium w3-hide-large" id="main-sidebar"></nav>
+		<script>$("#main-sidebar").load("../common/sidebar.html");</script>
+
+		<!-- Header with full-height image -->
+		<header class="bgimg-3 w3-display-container w3-center w3-text-white">
+			<div class="w3-display-middle page">
+				<h1 class="w3-xxxlarge">Legal</h1>
+				<span class="w3-xlarge w3-padding-bottom">Legal Information and Resources</span>
+			</div>
+			<div class="w3-display-container w3-white w3-circle transition-icon">
+				<i class="w3-display-middle f7-icons f7-size-40">building_columns_fill</i>
+			</div>
+		</header>
+
+		<main id="#main">
+
+			<!-- Legal Section -->
+			<section class="w3-container">
+				<div id="legal-summary" class="w3-row-padding w3-stretch">
+					<div class="w3-col s12 m12 l6">
+						<i class="f7-icons f7-size-72">lock_fill</i>
+						<h2>Privacy Policy</h2>
+						<p>Curbai is committed to your privacy. Read our Privacy Policy for a clear explanation of if and how we collect, use, disclose, transfer, and store your information. Learn how to review any information that may be associated with you.</p>
+						<a href="/legal/privacy/">Read Curbai’s Privacy Policy<i class="f7-icons f7-inline f7-size-14">chevron_right</i></a>
+					</div>
+					<div class="w3-col s12 m12 l6">
+						<i class="f7-icons f7-size-72">checkmark_shield_fill</i>
+						<h2>Terms of Use</h2>
+						<p>At Curbai, the safety of your private information is of utmost importance to us. Please peruse our detailed Privacy Policy for further comprehension on if and how we gather, utilize, disseminate, transmit, and archive user info. Our policy includes comprehensive methods through which users can examine their own sensitive information.</p>
+						<a href="/legal/terms/">Read Curbai’s Terms of Use<i class="f7-icons f7-inline f7-size-14">chevron_right</i></a>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer" class="platinum w3-padding-large"></footer>
+		<script>$("#footer").load("../common/footer.html");</script>
+		<script src="/scripts/main.js"></script>
+		<script>function accordion(id) {
+				var x = document.getElementById(id);
+				if (x.classList.contains("w3-show")) {
+					x.classList.remove("w3-show");
+				} else {
+					x.classList.add("w3-show");
+				}
+			}</script>
+
+	</body>
+
+</html>

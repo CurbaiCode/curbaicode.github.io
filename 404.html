@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<title>404 - Curbai</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#1E1E1E">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+
+	<body>
+
+		<!-- Navbar (sit on top) -->
+		<div id="nav-content" class="w3-top"></div>
+		<script>$("#nav-content").load("common/navbar.html");</script>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block space-gray w3-card animate-sidebar w3-hide-medium w3-hide-large" id="main-sidebar"></nav>
+		<script>$("#main-sidebar").load("common/sidebar.html");</script>
+
+		<!-- Header with full-height image -->
+		<header class="err w3-display-container silver w3-right-align">
+			<img class="w3-display-middleleft w3-image" src="/images/404.png" alt="Watermelon rind" />
+			<div class="w3-display-middleright">
+				<h1 class="w3-jumbo">404</h1>
+				<span class="w3-xxlarge w3-padding-bottom">Whoops!</span>
+				<p>Don‘t worry, we have much more where that came from.<br />Solutions are our specialty.</p>
+				<p>
+					<a href="/" class="w3-button curbai-orange curbai-hover-light-orange w3-round-xxlarge w3-padding-large w3-large w3-margin-top">Go Home</a>
+					<a onclick="window.history.go(-1)" class="w3-button curbai-orange-border curbai-hover-light-orange w3-round-xxlarge w3-padding-large w3-large w3-margin-top" style="margin-left:14px">Go Back</a>
+				</p>
+			</div>
+		</header>
+
+		<!-- Footer -->
+		<footer id="footer" class="w3-dark-gray w3-padding-large"></footer>
+		<script>$("#footer").load("common/footer.html");</script>
+		<script src="/scripts/main.js"></script>
+
+	</body>
+
+
+</html>

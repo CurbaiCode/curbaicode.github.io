@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<title>Project Details - Curbai</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#1E1E1E">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css">
+		<link rel="stylesheet" href="/stylesheets/twentytwenty.css">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+
+	<body>
+
+		<!-- Navbar (sit on top) -->
+		<div id="nav-content" class="w3-top"></div>
+		<script>$("#nav-content").load("../../common/navbar.html");</script>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block space-gray w3-card animate-sidebar w3-hide-medium w3-hide-large" id="main-sidebar"></nav>
+		<script>$("#main-sidebar").load("../../common/sidebar.html");</script>
+
+		<main id="#main">
+
+			<!-- Article Section -->
+			<section>
+				<article class="w3-display-container">
+					<div class="w3-display-middle">
+						<img class="w3-image" src="/images/loader.svg" alt="Loader" />
+					</div>
+					<div id="errmsg" class="w3-display-middle w3-center" style="background-color:#fff;opacity:0;transition:opacity 0.5s">
+						<h1 class="w3-jumbo">404</h1>
+						<p class="w3-xxlarge msg">Unknown Error</p>
+					</div>
+					<script>window.addEventListener("load", function () { setTimeout(function () { $("#errmsg").css("opacity", "1") }, 500) });</script>
+				</article>
+				<aside class="silver w3-center footertile">
+					<h3>Projects</h3>
+					<p>See What We’re Growing</p>
+					<a class="w3-button platinum w3-round-xxlarge w3-padding-large" href="/projects/">More Projects</a>
+				</aside>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer" class="platinum w3-padding-large"></footer>
+		<script>$("#footer").load("../../common/footer.html");</script>
+		<script src="https://unpkg.com/toml-patch"></script>
+		<script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
+		<script src="/scripts/jquery.event.move.js"></script>
+		<script src="/scripts/jquery.twentytwenty.js"></script>
+		<script src="/scripts/main.js"></script>
+		<script>
+			function isVisible(el) {
+				var pageTop = $(window).scrollTop();
+				var pageBottom = pageTop + $(window).height();
+				var elTop = $(el).offset().top;
+				var elBottom = elTop + $(el).height();
+				return ((elTop <= pageBottom) && (elBottom >= pageTop));
+			}
+			$(window).scroll(function () {
+				$(".article-media:not(.fullbleed)").each(function () {
+					if (isVisible($(this))) {
+						if (!$(this).hasClass("animate")) {
+							$(this).addClass("animate");
+							$(window).trigger("resize.twentytwenty");
+						}
+					}
+				});
+			});
+			function URLSafe(str) {
+				return str.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "").replace(/--/g, "-");
+			}
+			function getQueryVariable(variable) {
+				var query = location.search.substring(1);
+				var vars = query.split("&");
+				for (var i = 0; i < vars.length; i++) {
+					var pair = vars[i].split("=");
+					if (decodeURIComponent(pair[0]) == variable) {
+						return decodeURIComponent(pair[1]);
+					}
+				}
+				$(".msg").html("Invalid query");
+			}
+			var project = getQueryVariable("p");
+			if (project) {
+				$.get("/projects/details/" + project + ".toml", function (data) {
+					var article = TOML.parse(data);
+					$("article").removeClass("w3-display-container");
+
+					// Change appearance
+					if (article.dark) {
+						$("body").addClass("w3-black");
+						$("#footer").removeClass("platinum");
+						$("#footer").addClass("w3-dark-gray");
+					}
+
+					// Edit page title
+					document.title = article.title + " - Curbai";
+
+					// Build article local navigation bar
+					var localnav = $("<div/>", {
+						id: "localnav-content",
+						class: "aluminum"
+					});
+					var childNode = $("<nav/>", {
+						id: "local-navbar",
+						class: "w3-bar"
+					});
+					if (article.dark) {
+						localnav.removeClass("aluminum");
+						localnav.addClass("tungsten");
+					}
+					var grandchildNode = $("<a/>", {
+						class: "w3-bar-item w3-button w3-hover-none w3-hover-text-gray",
+						href: "/projects/",
+						html: "Projects"
+					});
+					childNode.append(grandchildNode);
+					var separatorNode = $("<p/>", {
+						class: "w3-bar-item separator",
+						html: "/"
+					});
+					childNode.append(separatorNode);
+					if (article.category) {
+						var grandchildNode = $("<a/>", {
+							class: "w3-bar-item w3-button w3-hover-none w3-hover-text-gray",
+							href: "/projects/#" + URLSafe(article.category),
+							html: article.category
+						});
+						childNode.append(grandchildNode);
+						var separatorNode = $("<p/>", {
+							class: "w3-bar-item separator",
+							html: "/"
+						});
+						childNode.append(separatorNode);
+					}
+					var grandchildNode = $("<p/>", {
+						class: "w3-bar-item title",
+						tooltip: article.title,
+						html: article.title
+					});
+					childNode.append(grandchildNode);
+					localnav.append(childNode);
+					$("main").prepend(localnav);
+
+					// Build article header content
+					var header = $("<div/>", {
+						id: "article-header",
+						class: "w3-row-padding w3-stretch"
+					});
+					if (article.head.center) { header.addClass("w3-center"); }
+					var titleContainer = $("<div/>", {
+						id: "article-title",
+						class: "w3-col l6 m12"
+					});
+					var eyebrow = $("<span/>", { class: "w3-text-" + article.head.eyebrow_color + " eyebrow" });
+					var icon = $("<i/>", {
+						class: "f7-icons f7-size-21 f7-inline",
+						"data-icon": article.head.eyebrow_icon
+					});
+					eyebrow.append(icon).html(eyebrow.html() + " " + article.head.eyebrow);
+					titleContainer.append(eyebrow);
+					var title = $("<h1/>", { html: article.title });
+					titleContainer.append(title);
+					$(article.head.subtitle).each(function (i) {
+						var subtitle = $("<p/>", { html: article.head.subtitle[i].content });
+						titleContainer.append(subtitle);
+					});
+					header.append(titleContainer);
+					var heroContainer = $("<div/>", {
+						id: "article-hero",
+						class: "w3-col l6 m12"
+					});
+					var hero = $("<figure/>", { class: "article-media animate" });
+					if (article.head.hero.big) { hero.addClass("media-big"); }
+					if (article.head.hero.fullbleed) { hero.addClass("fullbleed"); }
+					var tmpNode = hero;
+					if (article.head.hero.link) {
+						var linkNode = $("<a/>", { href: article.head.hero.link });
+						hero.append(linkNode);
+						var tmpNode = linkNode;
+					}
+					var mediaContainer = $("<" + article.head.hero.media + "/>", { class: "w3-round-large article-" + article.head.hero.media });
+					if (article.head.hero.media == "video" || article.head.hero.media == "audio") {
+						mediaContainer.attr("playsinline", "");
+						if (article.head.hero.autoplay) {
+							mediaContainer.attr("autoplay", "");
+							mediaContainer.attr("muted", "");
+						}
+						if (article.head.hero.loop) { mediaContainer.attr("loop", ""); }
+						if (article.head.hero.poster) { mediaContainer.attr("data-poster", article.head.hero.poster); }
+					}
+					var media = $("<" + article.head.hero.type + "/>", { src: article.head.hero.src });
+					if (article.head.hero.type == "img") {
+						media.addClass("w3-image");
+						media.attr("alt", article.head.hero.alt);
+					}
+					if (article.head.hero.type == "source") {
+						if (article.head.hero.media == "video") {
+							media.attr("type", "video/mp4");
+						}
+						if (article.head.hero.media == "audio") {
+							media.attr("type", "audio/mp3");
+						}
+					}
+					mediaContainer.append(media);
+					tmpNode.append(mediaContainer);
+					var figcaption = $("<figcaption/>");
+					var captionContainer = $("<div/>");
+					var caption = $("<p/>", {
+						class: "w3-text-gray w3-left-align",
+						html: article.head.hero.caption
+					});
+					captionContainer.append(caption);
+					if (article.head.hero.btn_icon) {
+						var btn = $("<a/>", {
+							class: "w3-button w3-hover-none article-button",
+							href: article.head.hero.btn_href,
+							title: article.head.hero.btn_tooltip
+						});
+						if (article.head.hero.download) { btn.attr("download", ""); }
+						var icon = $("<i/>", {
+							class: "f7-icons",
+							"data-icon": article.head.hero.btn_icon
+						});
+						btn.append(icon);
+						var icon = $("<i/>", {
+							class: "f7-icons",
+							"data-icon": article.head.hero.btn_icon + "_fill"
+						});
+						btn.append(icon);
+						captionContainer.append(btn);
+					}
+					figcaption.append(captionContainer);
+					hero.append(figcaption);
+					heroContainer.append(hero);
+					header.append(heroContainer);
+					$("article").html(header);
+
+					// Build article body content
+					var body = $("<div/>", { id: "article-body" });
+					if (article.body.dropcap) { body.addClass("dropcap"); }
+					$("article").append(body);
+
+					function build(el, parent) {
+						if (el.tag == undefined) {
+							if (el.code) {
+								var node = $("<pre/>", { class: "w3-round-large" });
+								var childNode = $("<code/>", { html: el.code });
+								node.append(childNode);
+							} else {
+								var node = $("<p/>");
+								if (el.caption) {
+									node.addClass("w3-text-gray");
+									node.html(el.caption);
+								}
+							}
+						} else {
+							var node = $("<" + el.tag + "/>");
+						}
+						if (el.tag == "figure") {
+							node.addClass("article-media");
+							if (el.big) { node.addClass("media-big"); }
+						} else if (el.tag == "iframe") {
+							node.attr("height", el.height);
+						} else if (el.tag == "blockquote") {
+							node.addClass("w3-panel w3-round w3-leftbar");
+						} else if (el.tag == "table") {
+							node.addClass("w3-table-all");
+							if (el.caption) {
+								var childNode = $("<caption/>", { html: el.caption });
+								node.append(childNode);
+							}
+							if (el.header) {
+								var headNode = $("<thead/>");
+								var rowNode = $("<tr/>");
+								$(el.header).each(function (i) {
+									var columnNode = $("<th/>", { html: el.header[i] });
+									if (el.formatcol) { columnNode.addClass(el.formatcol[i]); }
+									rowNode.append(columnNode);
+								});
+								headNode.append(rowNode);
+								node.append(headNode);
+							}
+							var bodyNode = $("<tbody/>");
+							$(el.data).each(function (i) {
+								var rowNode = $("<tr/>");
+								if (el.formatrow) { rowNode.addClass(el.formatrow[i]); }
+								$(el.data[i]).each(function (j) {
+									var columnNode = $("<td/>", { html: el.data[i][j] });
+									if (el.formatcol) { columnNode.addClass(el.formatcol[j]); }
+									if (el.formatcell) {
+										$(el.formatcell).each(function (k) {
+											if ((el.formatcell[k][0] - 1) == j && (el.formatcell[k][1] - 1) == i) {
+												columnNode.addClass(el.formatcell[k][2]);
+											}
+										});
+									}
+									rowNode.append(columnNode);
+								});
+								bodyNode.append(rowNode);
+							});
+							node.append(bodyNode);
+							if (el.foot) {
+								var footNode = $("<tfoot/>");
+								var rowNode = $("<tr/>");
+								$(el.foot).each(function (i) {
+									var columnNode = $("<td/>", { html: el.foot[i] });
+									if (el.formatcol) { columnNode.addClass(el.formatcol[i]); }
+									rowNode.append(columnNode);
+								});
+								footNode.append(rowNode);
+								node.append(footNode);
+							}
+						} else if (["h1", "h2", "h3", "h4", "h5", "h6"].indexOf(el.tag) >= 0) {
+							node.attr("id", URLSafe(el.content));
+						}
+						if (el.content) { node.html(el.content); }
+						if (el.id) { node.attr("id", el.id); }
+						if (el.class) {
+							node.addClass(el.class);
+							if (node.hasClass("carousel")) {
+								var childNode = $("<div/>", { class: "dotnav" });
+								var list = $("<ul/>");
+								$(el.child[0].child).each(function (i) {
+									var listItem = $("<li/>");
+									var indicator = $("<a/>", {
+										class: "dotnav-item",
+										href: "#",
+										onclick: "animateToItem(this)"
+									});
+									if (i == 0) { indicator.addClass("current"); }
+									listItem.append(indicator);
+									list.append(listItem);
+								});
+								childNode.append(list);
+								node.append(childNode);
+							}
+						}
+						if (el.href) { node.attr("href", el.href); }
+						if (el.src && el.tag != "figure") { node.attr("src", el.src); }
+						if (el.child) {
+							$(el.child).each(function (i) {
+								build(el.child[i], node);
+							});
+						}
+						if (el.tag == "figure") {
+							var tmpNode = node;
+							if (el.link) {
+								var linkNode = $("<a/>", { href: el.link });
+								node.append(linkNode);
+								var tmpNode = linkNode;
+							}
+							if (el.compare) {
+								var wrapperNode = $("<div/>", { class: "compare w3-round-large" });
+							}
+							var childNode = $("<" + el.media + "/>", { class: "w3-round-large article-" + el.media });
+							if (el.media == "video" || el.media == "audio") {
+								childNode.attr("playsinline", "");
+								if (el.autoplay) {
+									childNode.attr("autoplay", "");
+									childNode.attr("muted", "");
+								}
+								if (el.loop) { childNode.attr("loop", ""); }
+								if (el.poster) { childNode.attr("data-poster", el.poster); }
+							}
+							var grandchildNode = $("<" + el.type + "/>", { src: el.src });
+							if (el.type == "img") {
+								grandchildNode.addClass("w3-image");
+								grandchildNode.attr("alt", el.alt);
+								grandchildNode.attr("loading", "lazy");
+							}
+							if (el.type == "source") {
+								if (el.media == "video") {
+									grandchildNode.attr("type", "video/mp4");
+								}
+								if (el.media == "audio") {
+									grandchildNode.attr("type", "audio/mp3");
+								}
+							}
+							childNode.append(grandchildNode);
+							if (el.compare) {
+								wrapperNode.append(childNode);
+								var childNode = $("<" + el.media + "/>", { class: "w3-round-large article-" + el.media });
+								var grandchildNode = $("<" + el.type + "/>", {
+									class: "w3-image",
+									src: el.compare
+								});
+								childNode.append(grandchildNode);
+								wrapperNode.append(childNode);
+								tmpNode.append(wrapperNode);
+							} else {
+								tmpNode.append(childNode);
+							}
+							var childNode = $("<figcaption/>");
+							if (el.caption) {
+								var grandchildNode = $("<p/>", {
+									class: "w3-text-gray",
+									html: el.caption
+								});
+								childNode.append(grandchildNode);
+							}
+							if (el.btn_icon) {
+								var grandchildNode = $("<a/>", {
+									class: "w3-button w3-hover-none article-button",
+									href: el.btn_href,
+									title: el.btn_tooltip
+								});
+								if (el.download) { grandchildNode.attr("download", ""); }
+								var iconNode = $("<i/>", {
+									class: "f7-icons",
+									"data-icon": el.btn_icon
+								});
+								grandchildNode.append(iconNode);
+								var iconNode = $("<i/>", {
+									class: "f7-icons",
+									"data-icon": el.btn_icon + "_fill"
+								});
+								grandchildNode.append(iconNode);
+								childNode.append(grandchildNode);
+							}
+							node.append(childNode);
+						}
+						if (el.class && node.hasClass("carousel")) {
+							var childNode = $("<div/>", { class: "carousel-nav" });
+							var list = $("<ul/>");
+							var prevListItem = $("<li/>");
+							var nextListItem = $("<li/>");
+							var previous = $("<button/>", {
+								class: "w3-button w3-circle",
+								onclick: "animateToItem(this)"
+							});
+							var prevIcon = $("<i/>", {
+								class: "f7-icons",
+								"data-icon": "chevron_left"
+							});
+							previous.append(prevIcon);
+							prevListItem.append(previous);
+							list.append(prevListItem);
+							var next = $("<button/>", {
+								class: "w3-button w3-circle",
+								onclick: "animateToItem(this)"
+
+							});
+							var nextIcon = $("<i/>", {
+								class: "f7-icons",
+								"data-icon": "chevron_right"
+							});
+							next.append(nextIcon);
+							nextListItem.append(next);
+							list.append(nextListItem);
+							childNode.append(list);
+							node.append(childNode);
+						}
+						if (el.tag == "table") {
+							var wrapperNode = $("<div/>", { class: "w3-responsive" });
+							wrapperNode.append(node);
+							var node = wrapperNode;
+						}
+						if (el.prepend) {
+							parent.prepend(node);
+						} else {
+							parent.append(node);
+						}
+					}
+					$(article.body.element).each(function (i) {
+						build(article.body.element[i], $("#article-body"));
+					});
+					if (article.body.location) {
+						var node = $("<span/>", {
+							class: "location",
+							html: article.body.location
+						});
+						var childNode = $("<span/>", { html: " &mdash; " });
+						node.append(childNode);
+						$("#article-body > p:first-child").prepend(node);
+					}
+					if (article.author) {
+						var containerNode = $("<div/>", {
+							id: "author-section"
+						});
+						var headingNode = $("<h2/>", {
+							class: "w3-xlarge",
+							html: (article.author.length > 1) ? "Authors" : "Author"
+						});
+						containerNode.append(headingNode);
+						var authorNode = $("<div/>", {
+							id: "author-container",
+							class: "w3-row"
+						});
+						$(article.author).each(function (i) {
+							var node = $("<div/>", {
+								class: "w3-col s12 m12 l6 author"
+							});
+							var childNode = $("<img/>", {
+								class: "w3-image w3-circle ",
+								src: `/images/authors/${URLSafe(article.author[i])}.png`,
+								alt: article.author[i],
+								onerror: 'this.onerror=null;this.src="/images/authors/author.png"'
+							});
+							node.append(childNode);
+							var childNode = $("<p/>", {
+								html: article.author[i]
+							});
+							node.append(childNode);
+							var childNode = $("<p/>", {
+								class: "author-info",
+								html: article.author_info[i]
+							});
+							node.append(childNode);
+							authorNode.append(node);
+						});
+						containerNode.append(authorNode);
+						$("#article-body").append(containerNode);
+					}
+				}).fail(function () {
+					$(".msg").html('Project with ID <span style="text-decoration:underline">' + project + '</span> not found');
+				}).done(function () {
+					const videoPlayers = Plyr.setup(".article-video", {
+						iconUrl: "/images/plyr.svg",
+						controls: ["play-large", "play", "mute", "volume", "current-time", "progress", "duration", "pip", "airplay", "fullscreen"],
+						fullscreen: {
+							enabled: true,
+							fallback: true,
+							iosNative: true,
+							container: null
+						}
+					});
+					const audioPlayers = Plyr.setup(".article-audio", {
+						iconUrl: "/images/plyr.svg",
+						controls: ["rewind", "play", "fast-forward", "current-time", "progress", "duration", "mute", "volume"]
+					});
+					$(".plyr").each(function (i) {
+						$($(".plyr")[i]).addClass("w3-round-large");
+					});
+					$(".compare").each(function (i) {
+						$($(".compare")[i]).twentytwenty({ no_overlay: true });
+					});
+					$(".footnotes ol li").each(function (i) {
+						$(".footnotes ol li")[i].id = "footnote-" + (i + 1);
+					});
+					$(".footnote").each(function (i) {
+						$(".footnote")[i].href = "#footnote-" + $(".footnote")[i].innerHTML;
+					});
+					$("article a:not(.footnote, [download])").each(function (i) {
+						$($("article a:not(.footnote, [download])")[i]).attr("target", "_blank");
+					});
+					$.get("https://api.github.com/emojis", function (data) {
+						$("h1, h2, h3, h4, h5, h6, p, figcaption").each(function () {
+							var html = $(this).html();
+							html = html.replace(/:(\S*?):/g, (mat, grp) => ((data[grp] == null || data[grp] == undefined) ? mat : data[grp]).replace(/.*unicode\/(.*?)\..*/g, `&#x$1;`).replace(/-/g, ";&zwj;&#x"));
+							$(this).html(html);
+						});
+					}).fail(function () {
+						$("h1, h2, h3, h4, h5, h6, p, figcaption").each(function () {
+							var html = $(this).html();
+							html = html.replace(/:(\S*?):/g, "");
+							$(this).html(html);
+						});
+					});
+				});
+			}
+			function animateToItem(el) {
+				event.preventDefault();
+				var container = el.parentElement.parentElement.parentElement.parentElement;
+				var carousel = $(container).children(".carousel-media");
+				var indicator = $(container).children(".dotnav");
+				var items = $(carousel).children();
+				var current = $(carousel).children(".current")[0];
+				var currentIndicator = $(indicator).find(".current")[0];
+				var i = $(el.parentElement).index();
+				var n = 0;
+				if (el.classList.contains("dotnav-item")) {
+					n = i;
+				} else {
+					if (i == 0) { i = -1; }
+					n = $(current).index() + i;
+				}
+				if (n > items.length - 1) {
+					n -= items.length;
+				} else if (n < 0) {
+					n += items.length;
+				}
+				$(current).removeClass("current");
+				$(currentIndicator).removeClass("current");
+				$(carousel).children().eq(n).addClass("current");
+				$($(indicator).find(".dotnav-item")[n]).addClass("current");
+			}
+		</script>
+
+	</body>
+
+</html>

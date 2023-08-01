@@ -1,0 +1,104 @@
+@font-face {
+	font-family: "Framework7 Icons";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/Framework7Icons-Regular.woff2") format("woff2"),
+		url("../fonts/Framework7Icons-Regular.woff") format("woff");
+}
+
+.f7-icons,
+.framework7-icons {
+	font-family: "Framework7 Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 28px;
+	line-height: 28px;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+	text-align: center;
+	speak: never;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	/* Safari */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* IE10+/Edge */
+	user-select: none;
+	/* Standard */
+	cursor: default;
+}
+
+.f7-icons[data-icon]:before,
+.framework7-icons[data-icon]:before {
+	content: attr(data-icon);
+	color: inherit;
+}
+
+a .f7-icons,
+a .framework7-icons,
+button .f7-icons,
+button .framework7-icons,
+.w3-button .f7-icons,
+.w3-button .framework7-icons {
+	cursor: pointer;
+}
+
+.f7-size-14,
+.framework7-size-14 {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.f7-size-21,
+.framework7-size-21 {
+	font-size: 21px;
+	line-height: 21px;
+}
+
+.f7-size-28,
+.framework7-size-28 {
+	font-size: 28px;
+	line-height: 28px;
+}
+
+.f7-size-32,
+.framework7-size-32 {
+	font-size: 32px;
+	line-height: 32px;
+}
+
+.f7-size-40,
+.framework7-size-40 {
+	font-size: 40px;
+	line-height: 40px;
+}
+
+.f7-size-56,
+.framework7-size-56 {
+	font-size: 56px;
+	line-height: 56px;
+}
+
+.f7-size-72,
+.framework7-size-72 {
+	font-size: 72px;
+	line-height: 72px;
+}
+
+.f7-inline,
+.framework7-inline {
+	margin-top: -6px;
+	margin-bottom: -2px;
+}

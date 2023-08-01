@@ -15,10 +15,10 @@
 	font-variant: normal;
 	text-transform: none;
 	display: inline-block;
-	font-size: 44px;
-	line-height: 48px;
+	font-size: 32px;
+	line-height: 32px;
 	letter-spacing: normal;
-	padding-top: 4px;
+	margin-top: -4px;
 	white-space: nowrap;
 	word-wrap: normal;
 	direction: ltr;
@@ -50,7 +50,6 @@ w3-button .curbai-icon {
 } */
 
 footer .curbai-icon {
-	font-size: 52px;
-	line-height: 56px;
-	padding-top: 4px;
+	font-size: 48px;
+	line-height: 48px;
 }
