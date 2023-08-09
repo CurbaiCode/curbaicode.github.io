@@ -45,6 +45,7 @@
 	font-style: normal;
 	src: url("../fonts/Galeb-Regular.woff2") format("woff2"),
 		url("../fonts/Galeb-Regular.woff") format("woff");
+	font-display: swap;
 }
 
 @font-face {
@@ -52,6 +53,7 @@
 	font-style: normal;
 	src: url("../fonts/Galeb-Bold.woff2") format("woff2"),
 		url("../fonts/Galeb-Bold.woff") format("woff");
+	font-display: swap;
 }
 
 @font-face {
@@ -59,6 +61,7 @@
 	font-style: normal;
 	src: url("../fonts/Galeb-Light.woff2") format("woff2"),
 		url("../fonts/Galeb-Light.woff") format("woff");
+	font-display: swap;
 }
 
 @font-face {
@@ -66,6 +69,7 @@
 	font-style: normal;
 	src: url("../fonts/Galeb-Black.woff2") format("woff2"),
 		url("../fonts/Galeb-Black.woff") format("woff");
+	font-display: swap;
 }
 
 .plyr__control--overlaid:not(.plyr__control--overlaid:hover) {
