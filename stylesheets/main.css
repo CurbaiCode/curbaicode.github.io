@@ -256,6 +256,10 @@ button:disabled .f7-icons {
 	cursor: default !important;
 }
 
+a[onclick] {
+	cursor: pointer !important;
+}
+
 a:not([href]),
 button:disabled {
 	background-color: #fbfbfb !important;
