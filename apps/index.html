@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+	<head>
+		<title>Apps - Curbai</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#1E1E1E">
+		<meta name="robots" content="noindex, nofollow">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	</head>
+
+	<body onload="openTab()">
+
+		<div id="sprite">
+			<!--?xml version="1.0" encoding="UTF-8"?-->
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<symbol id="linux" viewBox="0 0 24 24">
+					<path d="m14.62 8.35c-.42.28-1.75 1.04-1.95 1.19-.39.31-.75.29-1.14-.01-.2-.16-1.53-.92-1.95-1.19-.48-.31-.45-.7.08-.92 1.64-.69 3.28-.64 4.91.03.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66-.53-.55-.86-1.17-1.06-1.88-.1-.33-.17-.67-.24-1.01-.2-.88-.29-1.78-.7-2.61-.73-1.58-2-2.4-3.84-2.47-1.81.05-3.16.81-3.95 2.4-.21.43-.36.88-.46 1.34-.17.76-.32 1.55-.5 2.32-.15.65-.45 1.21-.96 1.71-1.61 1.57-2.9 3.37-3.88 5.35-.14.29-.28.58-.37.88-.19.66.29 1.12.99.96.44-.09.88-.18 1.3-.31.41-.15.57-.05.67.35.65 2.15 2.07 3.66 4.24 4.5 4.12 1.56 8.93-.66 9.97-4.58.07-.27.17-.37.47-.27.46.14.93.24 1.4.35.49.09.85-.16.92-.64.03-.26-.06-.49-.16-.73" />
+				</symbol>
+			</svg>
+		</div>
+
+		<!-- Navbar (sit on top) -->
+		<div id="nav-content" class="w3-top"></div>
+		<script>$("#nav-content").load("../common/navbar.html");</script>
+
+		<!-- Sidebar on small screens when clicking the menu icon -->
+		<nav class="w3-sidebar w3-bar-block space-gray w3-card animate-sidebar w3-hide-medium w3-hide-large" id="main-sidebar"></nav>
+		<script>$("#main-sidebar").load("../common/sidebar.html");</script>
+
+		<!-- Header with full-height image -->
+		<header class="bgimg-3 w3-display-container w3-center w3-text-white">
+			<div class="w3-display-middle page">
+				<h1 class="w3-xxxlarge">Apps</h1>
+				<span class="w3-xlarge w3-padding-bottom">Welcome to the Garden</span>
+			</div>
+			<div class="w3-display-container w3-white w3-circle transition-icon">
+				<i class="w3-display-middle f7-icons f7-size-40">app_badge_fill</i>
+			</div>
+		</header>
+
+		<main id="main">
+
+			<!-- Apps Section -->
+			<section class="w3-container apps-container" id="apps">
+				<div class="w3-row-padding app-section" id="doctouch">
+					<div class="w3-row-padding w3-padding-large">
+						<div class="w3-col s12 m6 l6">
+							<img class="w3-image" src="/images/apps/DocTouch.png" alt="DocTouch icon" loading="lazy" />
+						</div>
+						<div class="w3-col s12 m6 l6 w3-padding download-section">
+							<h2>DocTouch</h2>
+							<h3>For when you need a magic touch</h3>
+							<a class="w3-button curbai-button w3-round-xxlarge" title="Download for macOS" download><i class="f7-icons f7-inline">logo_apple</i> Download</a>
+							<p class="w3-text-gray">Requires <strong>macOS 10.10 or later</strong></p>
+						</div>
+					</div>
+					<div class="w3-row-padding w3-padding-large">
+						<div class="w3-col m12 l6 w3-padding">
+							<h5><i class="f7-icons f7-size-32 f7-inline w3-text-gray">doc_fill</i> Touch Files</h5>
+							<p>Fix incorrect file icons or update icons with a touch.</p>
+						</div>
+						<div class="w3-col m12 l6 w3-padding">
+							<h5><i class="f7-icons f7-size-32 f7-inline w3-text-blue">folder_fill</i> Touch Folders</h5>
+							<p>Custom icon sticking? DocTouch can wipe that away.</p>
+						</div>
+					</div>
+					<div class="w3-row-padding w3-padding-large">
+						<div class="w3-col m12 l6 w3-padding">
+							<h5><i class="f7-icons f7-size-32 f7-inline w3-text-red">calendar_today</i> Modify Dates</h5>
+							<p>The picker is the digital color meter tool you use to get the color code from your screen.</p>
+						</div>
+						<div class="w3-col m12 l6 w3-padding">
+							<h5><i class="f7-icons f7-size-32 f7-inline w3-text-orange">cursor_rays</i> All Hope Is Not Lost</h5>
+							<p>File or application damaged or broken? Don’t send it to the trash right away, try touching it first.</p>
+						</div>
+					</div>
+					<div class="w3-row-padding w3-padding-large w3-round-large block silver">
+						<div class="w3-col m12 l6 right">
+							<img class="w3-image" src="/images/apps/screenshots/doctouch.png" alt="DocTouch app notification" loading="lazy" />
+						</div>
+						<div class="w3-col m12 l6 w3-padding-large">
+							<h4 class="w3-text-pink">It’s Magic</h4>
+							<p>Get in control of your files with a click. This is one wish you won’t regret.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Tabs Section -->
+			<section class="w3-center silver w3-text-white w3-container gallery">
+				<a class="tilt w3-display-container w3-col xs12 s4 m4 l2 tab" href="#doctouch" onclick="openTab('doctouch')">
+					<img class="w3-image" src="/images/apps/parallax/DocTouch.png" />
+					<img class="w3-image w3-display-middle lvl2" src="/images/apps/parallax/DocTouch2.png" />
+					<img class="w3-image w3-display-middle lvl3" src="/images/apps/parallax/DocTouch3.png" />
+					<img class="w3-image w3-display-middle lvl4" src="/images/apps/parallax/DocTouch4.png" />
+					<p class="w3-display-bottommiddle w3-padding w3-round-xlarge label">DocTouch</p>
+				</a>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer id="footer" class="platinum w3-padding-large"></footer>
+		<script>$("#footer").load("../common/footer.html");</script>
+		<script src="/scripts/main.js"></script>
+		<script>$(".app-section").each(function (i) {
+				var s = $(".app-section")[i];
+				var ds = $(s).find(".download-section").html();
+				if (ds) {
+					var node = document.createElement("div");
+					$(node).addClass("w3-center w3-padding-large end").html(ds);
+					$(s).append(node);
+				}
+			});
+
+			function openTab(name = location.hash.slice(1)) {
+				var x = document.querySelector("#apps").children;
+				if (name != "all") {
+					for (var i = 0; i < x.length; i++) {
+						x[i].style.display = "";
+					}
+					var el = document.getElementById(name);
+					if (el) {
+						el.style.display = "block";
+					}
+				} else {
+					for (var i = 0; i < x.length; i++) {
+						x[i].style.display = "block";
+					}
+				}
+			}</script>
+
+	</body>
+
+</html>
