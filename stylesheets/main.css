@@ -41,7 +41,8 @@
 }
 
 @font-face {
-	font-family: "Galeb Regular";
+	font-family: Galeb;
+	font-weight: 400;
 	font-style: normal;
 	src: url("../fonts/Galeb-Regular.woff2") format("woff2"),
 		url("../fonts/Galeb-Regular.woff") format("woff");
@@ -49,7 +50,8 @@
 }
 
 @font-face {
-	font-family: "Galeb Bold";
+	font-family: Galeb;
+	font-weight: 700;
 	font-style: normal;
 	src: url("../fonts/Galeb-Bold.woff2") format("woff2"),
 		url("../fonts/Galeb-Bold.woff") format("woff");
@@ -57,7 +59,8 @@
 }
 
 @font-face {
-	font-family: "Galeb Light";
+	font-family: Galeb;
+	font-weight: 300;
 	font-style: normal;
 	src: url("../fonts/Galeb-Light.woff2") format("woff2"),
 		url("../fonts/Galeb-Light.woff") format("woff");
@@ -65,7 +68,8 @@
 }
 
 @font-face {
-	font-family: "Galeb Black";
+	font-family: Galeb;
+	font-weight: 900;
 	font-style: normal;
 	src: url("../fonts/Galeb-Black.woff2") format("woff2"),
 		url("../fonts/Galeb-Black.woff") format("woff");
@@ -164,9 +168,14 @@ button[data-plyr="play"]>svg:not(.plyr__controls > button[data-plyr="play"] > sv
 	-ms-transform: translate(75%, -33%);
 }
 
+h1,
+h2,
+h3,
 h4,
+h5,
+h6,
 body {
-	font-family: "Galeb Regular", Arial, sans-serif;
+	font-family: Galeb, Helvetica, sans-serif;
 }
 
 body {
@@ -201,17 +210,11 @@ h3,
 h5,
 h6,
 th,
-strong,
 .label,
 .quote-text,
 article blockquote,
 .location {
-	font-weight: normal;
-	font-family: "Galeb Bold", Arial, sans-serif;
-}
-
-strong {
-	font-weight: normal;
+	font-weight: 700;
 }
 
 h4 {
@@ -237,7 +240,7 @@ h6 {
 }
 
 .w3-wide {
-	font-family: "Galeb Black", sans-serif;
+	font-weight: 900;
 }
 
 html,
@@ -473,7 +476,7 @@ blockquote {
 }
 
 #main-sidebar .sidebar-list {
-	font-family: "Galeb Bold", Arial, sans-serif;
+	font-weight: 700;
 	font-size: 22px;
 	opacity: 0;
 	transition: opacity 0.25s;
@@ -918,7 +921,7 @@ figcaption,
 }
 
 #article-body.dropcap>p:first-child::first-letter {
-	font-family: "Galeb Bold", Arial, sans-serif;
+	font-weight: 700;
 	font-size: 74px;
 	line-height: 1;
 	float: left;
@@ -1060,7 +1063,7 @@ figcaption,
 }
 
 .author p:not(.author-info) {
-	font-family: "Galeb Bold", Arial, sans-serif;
+	font-weight: 700;
 	font-size: 18px;
 	margin-bottom: 3px;
 }
@@ -1118,7 +1121,7 @@ figcaption,
 }
 
 .location span {
-	font-family: "Galeb Regular", Arial, sans-serif;
+	font-weight: 400;
 }
 
 .article-media:not(.animate, .fullbleed),
@@ -1230,7 +1233,7 @@ figcaption,
 
 .carousel-nav button .f7-icons {
 	margin: 0 auto;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .carousel-nav li:first-child button .f7-icons {
@@ -1375,7 +1378,7 @@ ol {
 }
 
 .app-section h3 {
-	font-family: "Galeb Regular", Arial, sans-serif;
+	font-weight: 400;
 	color: #757575;
 }
 
@@ -1535,7 +1538,7 @@ ol {
 }
 
 .tile-content h4 {
-	font-family: "Galeb Bold", Arial, sans-serif;
+	font-weight: 700;
 	margin: 0;
 	padding-top: 0;
 }

@@ -1,14 +1,14 @@
 @font-face {
-	font-family: "Curbai";
+	font-family: Curbai;
 	src: url("../fonts/Curbai.woff") format("woff2"),
 		url("../fonts/Curbai.woff2") format("woff");
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 	font-display: block;
 }
 
 .curbai-icon {
-	font-family: "Curbai" !important;
+	font-family: Curbai !important;
 	speak: never;
 	font-style: normal;
 	font-weight: normal;
