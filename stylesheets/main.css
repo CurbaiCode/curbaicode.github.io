@@ -769,6 +769,8 @@ article .footnotes {
 }
 
 #article-body,
+#article-title>*,
+#article-hero,
 .app-section,
 #legal-summary {
 	margin-left: auto;
@@ -849,6 +851,10 @@ article .carousel+hr {
 	font-size: 14px;
 }
 
+.eyebrow {
+	display: block;
+}
+
 figcaption {
 	max-width: 100%;
 	font-size: 12px;
@@ -876,22 +882,7 @@ iframe {
 }
 
 #article-header {
-	max-width: 1374px;
 	margin: 0 auto;
-}
-
-#article-title:not(#legal #article-title),
-#article-hero {
-	padding: 0 12px;
-}
-
-#article-title:not(#legal #article-title) {
-	padding-right: 0;
-	float: right;
-}
-
-#article-hero {
-	padding-left: 0;
 }
 
 #article-header,
@@ -913,6 +904,7 @@ iframe {
 }
 
 #article-body>*:not(aside.quote, .media-big),
+#article-title,
 figcaption,
 #article-body .quote-credit {
 	margin-left: auto;
@@ -1935,6 +1927,7 @@ ol {
 	}
 
 	#article-body>*:not(aside.quote, .media-big),
+	#article-title,
 	figcaption,
 	#article-body .quote-credit {
 		width: 576px;
@@ -2029,10 +2022,11 @@ ol {
 		margin: 0 auto;
 	}
 
-	#article-header>*:not(#article-hero),
-	#article-hero>*:not(.fullbleed),
+	#article-header>*,
+	#article-title,
+	#article-hero>*:not(.fullbleed, .media-big),
 	#article-hero figcaption>div,
-	#article-body>* {
+	#article-body>*:not(.media-big) {
 		width: 87.5%;
 	}
 
@@ -2070,6 +2064,7 @@ ol {
 
 	#article-hero>*:not(.media-big),
 	#article-body>*:not(aside.quote, .media-big),
+	#article-title>*,
 	.fullbleed figcaption,
 	#article-body .quote-credit {
 		width: 87.5%;
@@ -2102,27 +2097,6 @@ ol {
 
 	.carousel-nav li button .f7-icons {
 		color: rgba(0, 0, 0, 0.64);
-	}
-
-	.fullbleed .w3-round,
-	.fullbleed .w3-round-medium {
-		border-radius: 4px;
-	}
-
-	.fullbleed .w3-round-small {
-		border-radius: 2px;
-	}
-
-	.fullbleed .w3-round-large {
-		border-radius: 8px;
-	}
-
-	.fullbleed .w3-round-xlarge {
-		border-radius: 16px;
-	}
-
-	.fullbleed .w3-round-xxlarge {
-		border-radius: 32px;
 	}
 
 	#article-body.dropcap>p:first-child::first-letter {
@@ -2260,19 +2234,6 @@ ol {
 		max-width: 100%;
 		padding: 0;
 	}
-
-	#article-title,
-	#article-hero {
-		padding: 0;
-		margin: 0 auto;
-		float: none;
-	}
-
-	#article-title,
-	#article-hero>*:not(.media-big) {
-		width: 576px;
-		float: none !important;
-	}
 }
 
 @media (min-width: 1189px) {
@@ -2328,14 +2289,6 @@ ol {
 @media (min-width: 993px) {
 	header div:not(.page, .transition-icon) {
 		padding: 128px 280px;
-	}
-
-	#article-header {
-		padding: 0 22px;
-	}
-
-	#article-hero>* {
-		margin: 0;
 	}
 }
 

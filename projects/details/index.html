@@ -150,13 +150,11 @@
 
 					// Build article header content
 					var header = $("<div/>", {
-						id: "article-header",
-						class: "w3-row-padding w3-stretch"
+						id: "article-header"
 					});
 					if (article.head.center) { header.addClass("w3-center"); }
 					var titleContainer = $("<div/>", {
-						id: "article-title",
-						class: "w3-col l6 m12"
+						id: "article-title"
 					});
 					var eyebrow = $("<span/>", { class: "w3-text-" + article.head.eyebrow_color + " eyebrow" });
 					var icon = $("<i/>", {
@@ -173,8 +171,7 @@
 					});
 					header.append(titleContainer);
 					var heroContainer = $("<div/>", {
-						id: "article-hero",
-						class: "w3-col l6 m12"
+						id: "article-hero"
 					});
 					var hero = $("<figure/>", { class: "article-media animate" });
 					if (article.head.hero.big) { hero.addClass("media-big"); }
