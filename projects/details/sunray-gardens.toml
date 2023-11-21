@@ -12,7 +12,6 @@ eyebrow_icon = "checkmark_circle"
 content = "A simple website for the fictitious company Sunray Gardens. This website was designed as a test for gaining experience in web development."
 
 [head.hero]
-big = true
 fullbleed = false
 media = "picture"
 type = "img"
