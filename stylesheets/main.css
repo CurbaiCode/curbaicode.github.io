@@ -322,23 +322,23 @@ caption {
 
 /* Full height image header */
 .bgimg-1 {
-	background: url("../images/hero-dark.png") center/cover no-repeat;
+	background: #3c214e url("../images/hero-dark.png") center/cover no-repeat;
 	height: auto;
 	height: 100%;
 	min-height: 469px;
 }
 
 .bgimg-2 {
-	background: url("../images/sidekick.png") center/cover no-repeat;
+	background: #b4797a url("../images/sidekick.png") center/cover no-repeat;
 }
 
 .bgimg-3 {
-	background: url("../images/hero.png") center/cover no-repeat;
+	background: var(--orange) url("../images/hero.png") center/cover no-repeat;
 	height: 289px;
 }
 
 .bgimg-4 {
-	background: url("../images/sidekick-dark.png") center/cover no-repeat;
+	background: #2c121f url("../images/sidekick-dark.png") center/cover no-repeat;
 	color: #fff;
 }
 
@@ -588,6 +588,11 @@ blockquote {
 #footer-contents a {
 	text-decoration: none;
 	white-space: nowrap;
+}
+
+.footer-icons {
+	font-size: 16px;
+	line-height: 45px;
 }
 
 .footer-icons a {
