@@ -222,12 +222,12 @@
 						if (article.head.hero.download) { btn.attr("download", ""); }
 						var icon = $("<i/>", {
 							class: "f7-icons",
-							"data-icon": article.head.hero.btn_icon
+							html: article.head.hero.btn_icon
 						});
 						btn.append(icon);
 						var icon = $("<i/>", {
 							class: "f7-icons",
-							"data-icon": article.head.hero.btn_icon + "_fill"
+							html: article.head.hero.btn_icon + "_fill"
 						});
 						btn.append(icon);
 						captionContainer.append(btn);
@@ -410,12 +410,12 @@
 								if (el.download) { grandchildNode.attr("download", ""); }
 								var iconNode = $("<i/>", {
 									class: "f7-icons",
-									"data-icon": el.btn_icon
+									html: el.btn_icon
 								});
 								grandchildNode.append(iconNode);
 								var iconNode = $("<i/>", {
 									class: "f7-icons",
-									"data-icon": el.btn_icon + "_fill"
+									html: el.btn_icon + "_fill"
 								});
 								grandchildNode.append(iconNode);
 								childNode.append(grandchildNode);
@@ -433,7 +433,7 @@
 							});
 							var prevIcon = $("<i/>", {
 								class: "f7-icons",
-								"data-icon": "chevron_left"
+								html: "chevron_left"
 							});
 							previous.append(prevIcon);
 							prevListItem.append(previous);
@@ -445,7 +445,7 @@
 							});
 							var nextIcon = $("<i/>", {
 								class: "f7-icons",
-								"data-icon": "chevron_right"
+								html: "chevron_right"
 							});
 							next.append(nextIcon);
 							nextListItem.append(next);
